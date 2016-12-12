@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BuilderPattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Building Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYK-hq-urd">
+                                <rect key="frame" x="109" y="28" width="156" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Lkz-f0-IZB"/>
+                                    <constraint firstAttribute="width" constant="156" id="fwJ-pm-HzB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WBc-TI-Sbd">
+                                <rect key="frame" x="139" y="70" width="97" height="29"/>
+                                <segments>
+                                    <segment title="Brick"/>
+                                    <segment title="Glass"/>
+                                </segments>
+                                <connections>
+                                    <action selector="typeSelectionValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="EYF-Ec-sqS"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Storey Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJ3-NE-Urg">
+                                <rect key="frame" x="118" y="119" width="139" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="mv2-IS-VIg"/>
+                                    <constraint firstAttribute="width" constant="139" id="onZ-b6-Pls"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vZY-mW-Dx9">
+                                <rect key="frame" x="139" y="158" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="4MG-j8-XI6"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6Q-Ob-Loh">
+                                <rect key="frame" x="144" y="224" width="87" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Bp9-Di-TdJ"/>
+                                    <constraint firstAttribute="width" constant="87" id="HKV-4b-C4b"/>
+                                </constraints>
+                                <state key="normal" title="Build"/>
+                                <connections>
+                                    <action selector="actionButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sof-Qd-Mfd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uJ3-NE-Urg" firstAttribute="top" secondItem="WBc-TI-Sbd" secondAttribute="bottom" constant="21" id="3kD-pp-i8C"/>
+                            <constraint firstItem="CYK-hq-urd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NrZ-wE-jPz"/>
+                            <constraint firstItem="WBc-TI-Sbd" firstAttribute="top" secondItem="CYK-hq-urd" secondAttribute="bottom" constant="21" id="OSd-Es-4M6"/>
+                            <constraint firstItem="uJ3-NE-Urg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QHj-5Y-ENR"/>
+                            <constraint firstItem="m6Q-Ob-Loh" firstAttribute="top" secondItem="vZY-mW-Dx9" secondAttribute="bottom" constant="36" id="aZU-GA-LfI"/>
+                            <constraint firstItem="CYK-hq-urd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="fU6-c7-bo2"/>
+                            <constraint firstItem="vZY-mW-Dx9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gBe-k9-dje"/>
+                            <constraint firstItem="m6Q-Ob-Loh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mXV-pd-ONc"/>
+                            <constraint firstItem="vZY-mW-Dx9" firstAttribute="top" secondItem="uJ3-NE-Urg" secondAttribute="bottom" constant="18" id="pLr-v5-Jp4"/>
+                            <constraint firstItem="WBc-TI-Sbd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xnm-Fe-91o"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="storeySelectionField" destination="vZY-mW-Dx9" id="psZ-xF-d5v"/>
+                        <outlet property="typeSelectionControl" destination="WBc-TI-Sbd" id="zgi-go-Eqf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+</document>
